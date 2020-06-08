@@ -1,9 +1,9 @@
 # Random Password Generator
 
 
-[Link to Webpage] (https://github.com/DanielleByrne/gt-password-generator-homework)
+[Link to Webpage] (https://daniellebyrne.github.io/gt-password-generator-homework/)
 
-[Link to GitHub] (https://daniellebyrne.github.io/gt-password-generator-homework/.)
+[Link to GitHub] (https://github.com/DanielleByrne/gt-password-generator-homework)
 
 ## Table of Contents 
 
