@@ -94,7 +94,7 @@ function generatePassword() {
     }
   }
 
-  return password;
+  return password.join("");
 }
 
 // if/then for length of password verifier
