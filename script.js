@@ -1,35 +1,15 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+var passLength;
+var upLetters;
+var lowLetters;
+var numbers;
+var spclChar;
 
-
-// Getting password info
-var passLength = prompt(
-  "Please select a password length between 8 and 128 characters."
-);
-var upLetters = confirm(
-  "Would you like to include uppercase letters? Please click cancel for no or OK for yes."
-);
-var lowLetters = confirm(
-  "Would you like to include lowercase letters? Please click cancel for no or OK for yes."
-);
-var numbers = confirm(
-  "Would you like to include numbers? Please click cancel for no or OK for yes."
-);
-var spclChar = confirm(
-  "Would you like tp include special characters? Please click cancel for no or OK for yes."
-);
-// conditional for nothing selected 
-if (
-  upLetters === false &&
-  lowLetters === false &&
-  numbers === false &&
-  spclChar === false
-) {
-  alert("Please refresh and select at least one character type");
-}
-// passworkd generating function
+// password generating function
 function generatePassword() {
+  console.log (upLetters)
   var password = [];
 
   // flags
@@ -98,13 +78,6 @@ function generatePassword() {
   return password.join("");
 }
 
-// if/then for length of password verifier
-if (passLength >= 8 && passLength <= 128) {
-  generatePassword();
-  writePassword();
-} else {
-  prompt("Please enter a number between 8 and 128.");
-}
 
 // function to find random index of arrays
 function randomPick(arrayType) {
@@ -112,6 +85,32 @@ function randomPick(arrayType) {
 }
 
 function writePassword() {
+   passLength = prompt(
+    "Please select a password length between 8 and 128 characters."
+  );
+   upLetters = confirm(
+    "Would you like to include uppercase letters? Please click cancel for no or OK for yes."
+  );
+   lowLetters = confirm(
+    "Would you like to include lowercase letters? Please click cancel for no or OK for yes."
+  );
+   numbers = confirm(
+    "Would you like to include numbers? Please click cancel for no or OK for yes."
+  );
+   spclChar = confirm(
+    "Would you like tp include special characters? Please click cancel for no or OK for yes."
+  ); 
+
+  // conditional for nothing selected 
+if (
+  upLetters === false &&
+  lowLetters === false &&
+  numbers === false &&
+  spclChar === false
+) {
+  alert("Please refresh and select at least one character type");
+}
+  
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
