@@ -2,6 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 
+
 // Getting password info
 var passLength = prompt(
   "Please select a password length between 8 and 128 characters."
@@ -94,7 +95,7 @@ function generatePassword() {
     }
   }
 
-  return password;
+  return password.join("");
 }
 
 // if/then for length of password verifier
